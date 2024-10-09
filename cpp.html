@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>C++</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Principal</a>
+        <a href="./tinkercad.html">Tinkercad</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./java.html">Java</a>
+    </nav>
+    <br>
+    <h1>C++</h1>
+    <br>
+    <h2>O que é o C++</h2>
+    <p>C++ é uma linguagem de programação de propósito geral, desenvolvida por Bjarne Stroustrup no início dos anos 1980. É uma extensão da linguagem C, incorporando conceitos de programação orientada a objetos, como classes e objetos, além de suporte para programação genérica e funcional.</p>
+    <br>
+    <img src="./C++_ARD.jpg" alt="codigo_c++_ide_arduino">
+    <br>
+    <small>Fonte: autoral</small>
+    <br>
+    <h2>Código escrito</h2>
+    <br>
+    <pre>
+        // C++ code
+//
+int pot1 = 0;
+
+int pot2 = 0;
+
+int res = 0;
+
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(A1, INPUT);
+
+  pot1 = 0;
+  pot2 = 0;
+  res = 0;
+  digitalWrite(12, LOW);
+}
+
+void loop()
+{
+  pot1 += analogRead(A0);
+  Serial.println("POT1--------------------------------------");
+  Serial.println(pot1);
+  pot2 += analogRead(A1);
+  Serial.println("POT2---------------------------------------------");
+  Serial.println(pot2);
+  if (pot1 > pot2) {
+    res += (pot1 + pot2);
+    Serial.println("RES------------------------------------------");
+    Serial.println(res);
+    digitalWrite(12, HIGH);
+  } else {
+    digitalWrite(12, LOW);
+  }
+  delay(1); // Wait for 1 millisecond(s)
+}
+    </pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Java</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Principal</a>
+        <a href="./tinkercad.html">Tinkercad</a>
+        <a href="./cpp.html">C++</a>
+        <a href="./java.html">Java</a>
+    </nav>
+    <h1>Java</h1>
+    <br>
+    <h2>O que é java</h2>
+    <p>Java é uma linguagem de programação de propósito geral, orientada a objetos, desenvolvida por James Gosling e sua equipe na Sun Microsystems, lançada em 1995. É conhecida por sua portabilidade, segurança e robustez. </p>
+    <br>
+    <img src="./java.jpg" alt="img_java">
+    <br>
+    <small>Fonte: autoral</small>
+    <br>
+    <h2>Código escrito</h2>
+    <br>
+    <pre>import java.util.Scanner;
+
+        public class programa04 {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+        
+                int pot1= 0, pot2 = 0, res = 0;
+                boolean led = false;
+        
+                System.out.print("Digite o valor do sensor potenciometro 1: ");
+                pot1 = sc.nextInt();
+                System.out.print("Digite o valor do sensor potenciometro 2: ");
+                pot2 = sc.nextInt();
+        
+                if(pot1 > pot2){
+                    res = pot1 + pot2;
+                    System.out.printf(" A resposta é: %d ", res);
+                    led = true;
+                }else{
+                    led = false;
+                }
+        
+        
+        
+                sc.close();
+            }
+        }
+        </pre>
+</body>
+</html>
